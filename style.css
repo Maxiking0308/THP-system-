@@ -15,3 +15,21 @@ button {
   border: none;
   color: white;
 }
+
+.navbar {
+  background: #061427;
+  padding: 10px;
+}
+
+.navbar button {
+  margin: 3px;
+}
+
+.tab {
+  display: none;
+  padding: 20px;
+}
+
+.tab.active {
+  display: block;
+}
