@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>THP Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<h2 id="welcome"></h2>
+<p id="rank"></p>
+
+<h3>Fahrzeuge</h3>
+<input id="vehicleName" placeholder="Fahrzeugname">
+<button onclick="addVehicle()">Hinzufügen</button>
+
+<ul id="vehicleList"></ul>
+
+<h3>Dienstplan</h3>
+<input id="shiftDate" type="date">
+<button onclick="addShift()">Eintragen</button>
+
+<ul id="shiftList"></ul>
+
+<script src="script.js"></script>
+</body>
+</html>
