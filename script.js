@@ -1,4 +1,3 @@
-// Feste User (kannst du erweitern)
 const users = [
   { dienstnummer: "101", passwort: "admin", rank: "Colonel", level: 5 },
   { dienstnummer: "214", passwort: "trooper", rank: "Trooper", level: 1 }
@@ -18,59 +17,127 @@ function login() {
   }
 }
 
-// Dashboard laden
 if (window.location.pathname.includes("dashboard.html")) {
   const user = JSON.parse(localStorage.getItem("user"));
+  if (!user) window.location.href = "index.html";
 
-  if (!user) {
-    window.location.href = "index.html";
-  } else {
-    document.getElementById("welcome").innerText =
-      "Willkommen #" + user.dienstnummer;
-    document.getElementById("rank").innerText =
-      "Rang: " + user.rank;
-  }
+  document.getElementById("userInfo").innerText =
+    "Dienstnummer: #" + user.dienstnummer + " | Rang: " + user.rank;
 
-  loadVehicles();
-  loadShifts();
+  showTab("home");
+  loadAll();
 }
 
-// Fahrzeuge speichern
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "index.html";
+}
+
+function showTab(tab) {
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  document.getElementById(tab).classList.add("active");
+}
+
+function loadAll() {
+  loadOfficers();
+  loadVehicles();
+  loadShifts();
+  loadApplications();
+  loadCalls();
+}
+
+/* OFFICERS */
+
+function addOfficer() {
+  let data = JSON.parse(localStorage.getItem("officers")) || [];
+  const dn = document.getElementById("newDN").value;
+  const rank = document.getElementById("newRank").value;
+  data.push({ dn, rank });
+  localStorage.setItem("officers", JSON.stringify(data));
+  loadOfficers();
+}
+
+function loadOfficers() {
+  let data = JSON.parse(localStorage.getItem("officers")) || [];
+  const list = document.getElementById("officerList");
+  list.innerHTML = "";
+  data.forEach(o => {
+    list.innerHTML += `<li>#${o.dn} - ${o.rank}</li>`;
+  });
+}
+
+/* VEHICLES */
+
 function addVehicle() {
-  let vehicles = JSON.parse(localStorage.getItem("vehicles")) || [];
+  let data = JSON.parse(localStorage.getItem("vehicles")) || [];
   const name = document.getElementById("vehicleName").value;
-  vehicles.push(name);
-  localStorage.setItem("vehicles", JSON.stringify(vehicles));
+  data.push(name);
+  localStorage.setItem("vehicles", JSON.stringify(data));
   loadVehicles();
 }
 
 function loadVehicles() {
-  let vehicles = JSON.parse(localStorage.getItem("vehicles")) || [];
+  let data = JSON.parse(localStorage.getItem("vehicles")) || [];
   const list = document.getElementById("vehicleList");
-  if (list) {
-    list.innerHTML = "";
-    vehicles.forEach(v => {
-      list.innerHTML += "<li>" + v + "</li>";
-    });
-  }
+  list.innerHTML = "";
+  data.forEach(v => {
+    list.innerHTML += `<li>${v}</li>`;
+  });
 }
 
-// Dienstplan speichern
+/* SCHEDULE */
+
 function addShift() {
-  let shifts = JSON.parse(localStorage.getItem("shifts")) || [];
+  let data = JSON.parse(localStorage.getItem("shifts")) || [];
   const date = document.getElementById("shiftDate").value;
-  shifts.push(date);
-  localStorage.setItem("shifts", JSON.stringify(shifts));
+  data.push(date);
+  localStorage.setItem("shifts", JSON.stringify(data));
   loadShifts();
 }
 
 function loadShifts() {
-  let shifts = JSON.parse(localStorage.getItem("shifts")) || [];
+  let data = JSON.parse(localStorage.getItem("shifts")) || [];
   const list = document.getElementById("shiftList");
-  if (list) {
-    list.innerHTML = "";
-    shifts.forEach(s => {
-      list.innerHTML += "<li>" + s + "</li>";
-    });
-  }
+  list.innerHTML = "";
+  data.forEach(s => {
+    list.innerHTML += `<li>${s}</li>`;
+  });
+}
+
+/* APPLICATIONS */
+
+function addApplication() {
+  let data = JSON.parse(localStorage.getItem("applications")) || [];
+  const name = document.getElementById("appName").value;
+  data.push(name);
+  localStorage.setItem("applications", JSON.stringify(data));
+  loadApplications();
+}
+
+function loadApplications() {
+  let data = JSON.parse(localStorage.getItem("applications")) || [];
+  const list = document.getElementById("applicationList");
+  list.innerHTML = "";
+  data.forEach(a => {
+    list.innerHTML += `<li>${a}</li>`;
+  });
+}
+
+/* CAD */
+
+function addCall() {
+  let data = JSON.parse(localStorage.getItem("calls")) || [];
+  const text = document.getElementById("callText").value;
+  data.push(text);
+  localStorage.setItem("calls", JSON.stringify(data));
+  loadCalls();
+}
+
+function loadCalls() {
+  let data = JSON.parse(localStorage.getItem("calls")) || [];
+  const list = document.getElementById("callList");
+  list.innerHTML = "";
+  data.forEach(c => {
+    list.innerHTML += `<li>${c}</li>`;
+  });
 }
