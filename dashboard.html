@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>THP Dashboard</title>
+  <title>THP System V3</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2 id="welcome"></h2>
-<p id="rank"></p>
+<div class="navbar">
+  <button onclick="showTab('home')">Dashboard</button>
+  <button onclick="showTab('officers')">Mitarbeiter</button>
+  <button onclick="showTab('vehicles')">Fahrzeuge</button>
+  <button onclick="showTab('schedule')">Dienstplan</button>
+  <button onclick="showTab('applications')">Bewerbungen</button>
+  <button onclick="showTab('cad')">CAD</button>
+  <button onclick="logout()">Logout</button>
+</div>
 
-<h3>Fahrzeuge</h3>
-<input id="vehicleName" placeholder="Fahrzeugname">
-<button onclick="addVehicle()">Hinzufügen</button>
+<div id="home" class="tab">
+  <h2>Willkommen im THP System</h2>
+  <p id="userInfo"></p>
+</div>
 
-<ul id="vehicleList"></ul>
+<div id="officers" class="tab">
+  <h2>Mitarbeiter</h2>
+  <input id="newDN" placeholder="Dienstnummer">
+  <input id="newRank" placeholder="Rang">
+  <button onclick="addOfficer()">Hinzufügen</button>
+  <ul id="officerList"></ul>
+</div>
 
-<h3>Dienstplan</h3>
-<input id="shiftDate" type="date">
-<button onclick="addShift()">Eintragen</button>
+<div id="vehicles" class="tab">
+  <h2>Fahrzeuge</h2>
+  <input id="vehicleName" placeholder="Fahrzeugname">
+  <button onclick="addVehicle()">Hinzufügen</button>
+  <ul id="vehicleList"></ul>
+</div>
 
-<ul id="shiftList"></ul>
+<div id="schedule" class="tab">
+  <h2>Dienstplan</h2>
+  <input id="shiftDate" type="date">
+  <button onclick="addShift()">Eintragen</button>
+  <ul id="shiftList"></ul>
+</div>
+
+<div id="applications" class="tab">
+  <h2>Bewerbungen</h2>
+  <input id="appName" placeholder="Name">
+  <button onclick="addApplication()">Speichern</button>
+  <ul id="applicationList"></ul>
+</div>
+
+<div id="cad" class="tab">
+  <h2>Dispatch / CAD</h2>
+  <input id="callText" placeholder="Einsatzbeschreibung">
+  <button onclick="addCall()">Erstellen</button>
+  <ul id="callList"></ul>
+</div>
 
 <script src="script.js"></script>
 </body>
