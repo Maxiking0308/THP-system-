@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Texas Highway Patrol RP | Member Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/auth.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-area">
+        <div class="logo-badge">THP</div>
+        <div class="logo-text">
+          <span class="logo-title">Texas Highway Patrol RP</span>
+          <span class="logo-subtitle">Member Portal</span>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Public Site</a></li>
+          <li><a href="#overview" class="active">Dashboard</a></li>
+          <li><a href="#my-roster">My Profile</a></li>
+          <li><a href="#admin-tools">Admin Tools</a></li>
+          <li><button id="logout-btn" class="btn-nav btn-logout">Logout</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <section id="overview" class="section-narrow">
+        <h2>Welcome, <span id="user-name">Trooper</span></h2>
+        <p>Use this dashboard to update your status, access restricted SOPs, and view command announcements.</p>
+        <div class="grid-3">
+          <div class="card stat-card">
+            <h3>Patrol Hours (Month)</h3>
+            <p class="stat-value" id="stat-hours">0</p>
+          </div>
+          <div class="card stat-card">
+            <h3>Current Rank</h3>
+            <p class="stat-value" id="stat-rank">Trooper</p>
+          </div>
+          <div class="card stat-card">
+            <h3>Division</h3>
+            <p class="stat-value" id="stat-division">Highway Patrol</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="my-roster" class="section-narrow">
+        <h3>My Personnel File</h3>
+        <form class="form">
+          <div class="form-group">
+            <label for="pf-callsign">Callsign</label>
+            <input type="text" id="pf-callsign" name="callsign" value="215">
+          </div>
+          <div class="form-group">
+            <label for="pf-division">Division</label>
+            <select id="pf-division" name="division">
+              <option>Highway Patrol</option>
+              <option>Criminal Interdiction</option>
+              <option>Air Support</option>
+              <option>Training Division</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pf-status">Status</label>
+            <select id="pf-status" name="status">
+              <option>Active</option>
+              <option>LOA</option>
+              <option>Reserve</option>
+            </select>
+          </div>
+          <button type="button" class="btn-secondary">Save Changes (wire to API)</button>
+        </form>
+      </section>
+
+      <section id="admin-tools" class="section-narrow">
+        <h3>Admin & Command Tools</h3>
+        <p>Visible only to users with appropriate roles in your backend (e.g., command staff, training, recruitment).</p>
+        <ul class="checklist">
+          <li>Approve or deny recruitment applications.</li>
+          <li>Update roster entries and promotions.</li>
+          <li>Publish news posts and announcements.</li>
+          <li>Upload or edit restricted SOP documents.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Texas Highway Patrol RP. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
