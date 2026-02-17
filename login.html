@@ -10,11 +10,20 @@
 <body class="auth-body">
   <main class="auth-main">
     <div class="auth-card">
-      <div class="logo-badge large">THP</div>
-      <h1>Member Portal Login</h1>
-      <p class="auth-subtitle">Access your dashboard, roster tools, and training resources.</p>
+      <div class="logo-area auth-logo">
+        <div class="logo-badge large">THP</div>
+        <div class="logo-text">
+          <span class="logo-title">Texas Highway Patrol RP</span>
+          <span class="logo-subtitle">Member Portal</span>
+        </div>
+      </div>
 
-      <form class="form" id="login-form">
+      <h1 class="auth-title">Member Portal Login</h1>
+      <p class="auth-subtitle">
+        Access your dashboard, roster tools, and training resources.
+      </p>
+
+      <form class="form auth-form" id="login-form">
         <div class="form-group">
           <label for="login-username">Username or Email</label>
           <input type="text" id="login-username" name="username" required autocomplete="username">
@@ -23,7 +32,7 @@
           <label for="login-password">Password</label>
           <input type="password" id="login-password" name="password" required autocomplete="current-password">
         </div>
-        <button type="submit" class="btn-primary full-width">Login</button>
+        <button type="submit" class="btn-primary full-width auth-btn">Login</button>
         <p class="form-note">
           This is a front-end placeholder. Connect it to your backend (e.g., Node, PHP, or Laravel) to validate credentials and establish sessions.
         </p>
