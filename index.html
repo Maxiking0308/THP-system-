@@ -1,22 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Texas Highway Patrol</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Texas Highway Patrol RP | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Texas Highway Patrol GTA Roleplay community hub for recruitment, roster, training, and member services.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/main.js"></script>
 </head>
-<body class="landing">
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-area">
+        <div class="logo-badge">THP</div>
+        <div class="logo-text">
+          <span class="logo-title">Texas Highway Patrol RP</span>
+          <span class="logo-subtitle">Grand Theft Auto Roleplay Community</span>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#recruitment">Recruitment</a></li>
+          <li><a href="roster.html">Roster</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="login.html" class="btn-nav">Member Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<div class="hero">
-  <h1>TEXAS HIGHWAY PATROL</h1>
-  <p>Protecting the Highways. Serving with Honor.</p>
-  <button onclick="goLogin()">Zum System</button>
-</div>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Texas Highway Patrol GTA Roleplay</h1>
+          <p>
+            Enforce traffic laws, respond to high-risk situations, and protect the highways of a custom Texas-inspired world in an immersive GTA Roleplay experience.
+          </p>
+          <div class="hero-actions">
+            <a href="#recruitment" class="btn-primary">Apply as a Trooper</a>
+            <a href="login.html" class="btn-secondary">Member Portal</a>
+          </div>
+          <ul class="hero-highlights">
+            <li>Serious roleplay with structured command</li>
+            <li>Custom CAD/MDT and radio procedures</li>
+            <li>Realistic traffic and pursuit policies</li>
+          </ul>
+        </div>
+        <div class="hero-image">
+          <div class="hero-card">
+            <span class="hero-badge">Highway Patrol</span>
+            <h2>Serve & Protect the Lone Star Highways</h2>
+            <p>Join a disciplined unit focused on traffic enforcement, highway interdiction, and officer safety.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-function goLogin(){
-  window.location.href = "dashboard.html";
-}
-</script>
+    <!-- ABOUT / MISSION -->
+    <section class="section" id="mission">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Mission</h2>
+          <p>
+            To provide a structured, respectful, and immersive law enforcement roleplay environment modeled after a modern state highway patrol agency.[web:7]
+          </p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Professionalism</h3>
+            <p>Clear standard operating procedures, chain of command, and training for all troopers.</p>
+          </div>
+          <div class="card">
+            <h3>Realism</h3>
+            <p>Emphasis on realistic traffic stops, pursuits, and incident management over random chaos.</p>
+          </div>
+          <div class="card">
+            <h3>Community</h3>
+            <p>Respectful, inclusive environment for both new and experienced roleplayers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- RECRUITMENT -->
+    <section class="section section-alt" id="recruitment">
+      <div class="container">
+        <div class="section-header">
+          <h2>Recruitment & Applications</h2>
+          <p>Apply to become a Texas Highway Patrol RP Trooper and start your law enforcement career path.</p>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <h3>Requirements</h3>
+            <ul class="checklist">
+              <li>Minimum age: 16+ (server policy configurable)</li>
+              <li>Working microphone and stable internet connection</li>
+              <li>Fluent in English and able to follow verbal instructions</li>
+              <li>Basic understanding of GTA Roleplay rules and etiquette</li>
+              <li>Ability to attend scheduled trainings and patrols</li>
+              <li>No recent serious bans on the community server</li>
+            </ul>
+
+            <h3>Process</h3>
+            <ol class="numbered">
+              <li>Submit the application form below.</li>
+              <li>Wait for review by Recruitment and Training staff.</li>
+              <li>Complete an interview on Discord or in-game.</li>
+              <li>Attend Basic Trooper Training if accepted.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h3>Application Form</h3>
+            <form class="form" id="recruitment-form">
+              <div class="form-group">
+                <label for="app-discord">Discord Username</label>
+                <input type="text" id="app-discord" name="discord" required placeholder="Example#1234">
+              </div>
+              <div class="form-group">
+                <label for="app-age">Age</label>
+                <input type="number" id="app-age" name="age" min="13" required>
+              </div>
+              <div class="form-group">
+                <label for="app-timezone">Time Zone</label>
+                <input type="text" id="app-timezone" name="timezone" placeholder="CET, CST, etc." required>
+              </div>
+              <div class="form-group">
+                <label for="app-experience">Roleplay Experience</label>
+                <textarea id="app-experience" name="experience" rows="3" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="app-motivation">Why do you want to join?</label>
+                <textarea id="app-motivation" name="motivation" rows="3" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="app-availability">Availability (days/times)</label>
+                <textarea id="app-availability" name="availability" rows="2"></textarea>
+              </div>
+              <button type="submit" class="btn-primary full-width">Submit Application</button>
+              <p class="form-note">Submissions will be sent to staff via your backend integration (Discord webhook, database, or email).</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="section" id="news">
+      <div class="container">
+        <div class="section-header">
+          <h2>News & Announcements</h2>
+          <p>Stay informed about patrol updates, policy changes, and community events.</p>
+        </div>
+        <div class="grid-3" id="news-list">
+          <article class="card card-news">
+            <span class="badge">Update</span>
+            <h3>Server Launch</h3>
+            <p>Our Texas Highway Patrol GTA RP server is now live. Join patrols and help us build a strong traffic enforcement presence.</p>
+            <span class="meta">Posted: Feb 2026</span>
+          </article>
+          <article class="card card-news">
+            <span class="badge badge-gold">Training</span>
+            <h3>Basic Trooper Academy</h3>
+            <p>New recruits must attend the upcoming Basic Trooper Academy covering traffic stops, pursuits, radio, and report writing.</p>
+            <span class="meta">Posted: Feb 2026</span>
+          </article>
+          <article class="card card-news">
+            <span class="badge badge-dark">Policy</span>
+            <h3>Pursuit Policy Revision</h3>
+            <p>High-speed pursuit rules updated to focus on safety, risk assessment, and proper termination techniques.</p>
+            <span class="meta">Posted: Feb 2026</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact Leadership</h2>
+          <p>Reach out to command staff for questions about recruitment, complaints, or partnerships.</p>
+        </div>
+        <div class="grid-2">
+          <div>
+            <h3>Contact Details</h3>
+            <ul class="contact-list">
+              <li><strong>Discord Server:</strong> <span>discord.gg/yourinvite</span></li>
+              <li><strong>Email:</strong> <span>leadership@thprp.example</span></li>
+              <li><strong>In-Game:</strong> <span>Use /911 or /admin to request a Highway Patrol supervisor.</span></li>
+            </ul>
+            <p class="small">
+              This project is an independent GTA RP community and is not affiliated with the official Texas Department of Public Safety or Texas Highway Patrol.[web:5][web:7]
+            </p>
+          </div>
+          <div>
+            <h3>Contact Form</h3>
+            <form class="form" id="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Your Name / Handle</label>
+                <input type="text" id="contact-name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email or Discord</label>
+                <input type="text" id="contact-email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn-secondary full-width">Send Message</button>
+              <p class="form-note">Tie this form into your preferred ticket, email, or Discord bot system.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Texas Highway Patrol RP. All rights reserved. Not affiliated with the Texas Department of Public Safety.[web:5][web:7]</p>
+      <div class="footer-links">
+        <a href="#mission">Mission</a>
+        <a href="#recruitment">Recruitment</a>
+        <a href="login.html">Member Portal</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
