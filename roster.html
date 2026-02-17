@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Texas Highway Patrol RP | Roster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-area">
+        <div class="logo-badge">THP</div>
+        <div class="logo-text">
+          <span class="logo-title">Texas Highway Patrol RP</span>
+          <span class="logo-subtitle">Grand Theft Auto Roleplay Community</span>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#recruitment">Recruitment</a></li>
+          <li><a href="roster.html" class="active">Roster</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="index.html#news">News</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="login.html" class="btn-nav">Member Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Patrol Roster</h2>
+        <p>Active troopers, their ranks, call signs, and primary divisions.</p>
+      </div>
+
+      <div class="roster-filters">
+        <select id="filter-division">
+          <option value="all">All Divisions</option>
+          <option value="patrol">Highway Patrol</option>
+          <option value="ci">Criminal Interdiction</option>
+          <option value="air">Air Support</option>
+          <option value="command">Command Staff</option>
+          <option value="training">Training Division</option>
+        </select>
+        <input type="text" id="filter-search" placeholder="Search by name or callsign">
+      </div>
+
+      <div class="table-wrapper">
+        <table class="roster-table" id="roster-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Callsign</th>
+              <th>Rank</th>
+              <th>Division</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example static rows; replace with backend-rendered data -->
+            <tr data-division="command">
+              <td>J. Walker</td>
+              <td>101</td>
+              <td>Colonel</td>
+              <td>Command Staff</td>
+              <td><span class="status status-active">Active</span></td>
+            </tr>
+            <tr data-division="patrol">
+              <td>M. Reyes</td>
+              <td>215</td>
+              <td>Sergeant</td>
+              <td>Highway Patrol</td>
+              <td><span class="status status-active">Active</span></td>
+            </tr>
+            <tr data-division="ci">
+              <td>T. Carter</td>
+              <td>341</td>
+              <td>Trooper</td>
+              <td>Criminal Interdiction</td>
+              <td><span class="status status-loa">LOA</span></td>
+            </tr>
+            <tr data-division="training">
+              <td>L. Nguyen</td>
+              <td>502</td>
+              <td>Lieutenant</td>
+              <td>Training Division</td>
+              <td><span class="status status-active">Active</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="small">
+        Roster is updated by command staff via the member portal and reflects in-game assignments and statuses.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Texas Highway Patrol RP. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
