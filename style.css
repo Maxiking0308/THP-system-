@@ -733,3 +733,72 @@ select:focus {
     padding: 1.6rem 1.3rem 1.5rem;
   }
 }
+.auth-body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #111827 0%, #020617 50%, #000000 100%);
+}
+
+.auth-main {
+  width: 100%;
+  max-width: 460px;
+  padding: 1.5rem;
+}
+
+.auth-card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.94));
+  border-radius: 20px;
+  padding: 2rem 1.8rem 1.6rem;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.auth-logo {
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.auth-title {
+  text-align: center;
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+}
+
+.auth-subtitle {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin: 0 0 1.4rem;
+}
+
+.auth-form {
+  margin-top: 0.5rem;
+}
+
+.auth-btn {
+  margin-top: 0.4rem;
+}
+
+.auth-footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.auth-footer-links a {
+  color: var(--color-accent);
+}
+
+.auth-footer-links a:hover {
+  color: var(--color-accent-dark);
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.7rem 1.3rem 1.5rem;
+    border-radius: 16px;
+  }
+}
