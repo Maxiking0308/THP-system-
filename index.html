@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>THP System</title>
+  <title>Texas Highway Patrol</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="landing">
 
-<h1>Texas Highway Patrol</h1>
-<h3>Login mit Dienstnummer</h3>
+<div class="hero">
+  <h1>TEXAS HIGHWAY PATROL</h1>
+  <p>Protecting the Highways. Serving with Honor.</p>
+  <button onclick="goLogin()">Zum System</button>
+</div>
 
-<input id="dienstnummer" placeholder="Dienstnummer">
-<input id="passwort" type="password" placeholder="Passwort">
-<button onclick="login()">Login</button>
+<script>
+function goLogin(){
+  window.location.href = "dashboard.html";
+}
+</script>
 
-<script src="script.js"></script>
 </body>
 </html>
